@@ -6,10 +6,15 @@ import Body from "./Body";
 
 function App() {
   return (
+    <>
     <table>
       <Head />
       <Body />
     </table>
+    <div>
+
+    </div>
+    </>
   );
 }
 
