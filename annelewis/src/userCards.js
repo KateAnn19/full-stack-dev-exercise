@@ -27,7 +27,7 @@ function UserCards() {
     setTimeout(function () {
       setUserData(data);
       return setPromiseComplete(!promiseComplete);
-    }, 9000);
+    }, 14000);
   }
 
   return (
@@ -54,7 +54,7 @@ function UserCards() {
         <>
           <div className="loader5"></div>
           <div>
-            <h2>Data Loading...This is will take up to 1 minute...</h2>
+            <h2>Data Loading...This could take up to 15 seconds...</h2>
           </div>
         </>
       )}
