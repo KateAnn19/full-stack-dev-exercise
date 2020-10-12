@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.user_card_button{
+  background-color: #f5ab35;
+  border: none;
+  padding: 20px;
+  margin-top: 30px;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+}
