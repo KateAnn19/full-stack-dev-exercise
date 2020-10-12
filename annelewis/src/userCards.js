@@ -17,7 +17,7 @@ function UserCards() {
   function makeApiCalls() {
     for (let i = 0; i < dataLimit; i++) {
       axios
-        .get("http://faker.hook.io/?property=helpers.userCard&amp;locale=en_US")
+        .get("https://cors-anywhere.herokuapp.com/http://faker.hook.io/?property=helpers.userCard&amp;locale=en_US")
         .then((response) => {
           data.push(response.data);
         })
