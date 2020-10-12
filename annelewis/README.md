@@ -9,5 +9,6 @@ This was bootstrapped with Create React App. I chose to do this instead of using
 1. to break the project into smaller components for readability
 2. because I am more familar and comfortable with organizing in this way. 
 
-React Experience: \n
-I have less than 1 year experience with React
+React Experience: 
+#
+✨I have less than 1 year experience with React
