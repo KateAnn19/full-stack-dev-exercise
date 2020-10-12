@@ -9,12 +9,22 @@
 }
 
 .card {
-  background-color: rgb(152, 94, 209);
+  background-color: rebeccapurple;
   border: 2px solid rgb(56, 24, 53);
   color: white;
   margin: 10px;
   width: 20%;
   font-size: 15px;
+  text-align: right;
+}
+
+.name{
+    background-color: #f8ae36;
+    margin-left: 60%;
+}
+
+.profilePic{
+    width: 100%;
 }
 
 .loader5 {

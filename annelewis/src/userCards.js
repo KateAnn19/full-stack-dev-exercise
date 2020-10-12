@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import profilepicture from "./undraw_personal_information_962o.png";
 //styles
 import "./UserCards.css";
 
@@ -35,6 +35,7 @@ function UserCards() {
       {promiseComplete && userData.length >= 2 ? (
         userData.map((u) => (
           <div className="card" key={u.name}>
+            <img className="profilePic" alt="vector image of woman with profile details" src={profilepicture}></img>  
             <h2>{u.name}</h2>
             <h2>{u.username}</h2>
             <h2>{u.email}</h2>
