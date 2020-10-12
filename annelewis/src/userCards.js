@@ -17,7 +17,9 @@ function UserCards() {
   function makeApiCalls() {
     for (let i = 0; i < dataLimit; i++) {
       axios
-        .get("https://cors-anywhere.herokuapp.com/http://faker.hook.io/?property=helpers.userCard&amp;locale=en_US")
+        .get(
+          "https://cors-anywhere.herokuapp.com/http://faker.hook.io/?property=helpers.userCard&amp;locale=en_US"
+        )
         .then((response) => {
           data.push(response.data);
         })
@@ -35,19 +37,44 @@ function UserCards() {
       {promiseComplete && userData.length >= 2 ? (
         userData.map((u) => (
           <div className="card" key={u.name}>
-            <img className="profilePic" alt="vector image of woman with profile details" src={profilepicture}></img>  
-            <h2>{u.name}</h2>
-            <h2>{u.username}</h2>
-            <h2>{u.email}</h2>
-            <h2>{u.address.street}</h2>
-            <h2>{u.address.suite}</h2>
-            <h2>{u.address.city}</h2>
-            <h2>{u.address.zipcode}</h2>
-            <h2>{u.company.name}</h2>
-            <h2>{u.company.catchPhrase}</h2>
-            <h2>{u.company.bs}</h2>
-            <h2>{u.phone}</h2>
-            <h2>{u.website}</h2>
+            <div className="profilepicCont">
+              <img
+                className="profilePic"
+                alt="vector image of woman with profile details"
+                src={profilepicture}
+              ></img>
+            </div>
+
+            <div className="info-container">
+              <div className="dataTags">
+                <h2>Name</h2>
+                <h2>Username</h2>
+                <h2>Email</h2>
+                <h2>Street</h2>
+                <h2>Suite</h2>
+                <h2>City</h2>
+                <h2>Zipcode</h2>
+                <h2>Company Name</h2>
+                <h2>Catch Phrase</h2>
+                <h2>BS</h2>
+                <h2>Phone</h2>
+                <h2>Website</h2>
+              </div>
+              <div className="data">
+                <h2>{u.name}</h2>
+                <h2>{u.username}</h2>
+                <h2>{u.email}</h2>
+                <h2>{u.address.street}</h2>
+                <h2>{u.address.suite}</h2>
+                <h2>{u.address.city}</h2>
+                <h2>{u.address.zipcode}</h2>
+                <h2>{u.company.name}</h2>
+                <h2>{u.company.catchPhrase}</h2>
+                <h2>{u.company.bs}</h2>
+                <h2>{u.phone}</h2>
+                <h2>{u.website}</h2>
+              </div>
+            </div>
           </div>
         ))
       ) : (
