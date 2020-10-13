@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import profilepicture from "./undraw_personal_information_962o.png";
-//styles
 import "./UserCards.css";
+import { TransitionGroup }  from 'react-transition-group'; // ES6
+//var ReactCSSTransitionGroup = require("react-transition-group"); // ES5 with npm
+//styles
 
 function UserCards() {
   const [userData, setUserData] = useState([]);
@@ -34,7 +36,7 @@ function UserCards() {
 
   return (
     <div className="container">
-      {promiseComplete && userData.length >= 2 ? (
+      {promiseComplete ? (
         userData.map((u) => (
           <div className="card" key={u.name}>
             <div className="profilepicCont">
@@ -79,10 +81,17 @@ function UserCards() {
         ))
       ) : (
         <>
-          <div className="loader5"></div>
-          <div>
-            <h2>Data Loading...This could take up to 15 seconds...</h2>
-          </div>
+          
+            <div className="loader5"></div>
+            <TransitionGroup
+            transitionName="example"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
+            <div>
+              <h2>Data Loading...This could take up to 15 seconds...</h2>
+            </div></TransitionGroup>
+          
         </>
       )}
     </div>
