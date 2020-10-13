@@ -12,7 +12,7 @@ Instructions for Opening:
 
 Exercise 1: </br>
 The function and logic is in userCards.js but the component is rendered in App.js. 
-
+#
 Exercise 2: </br>
 React Experience: </br>
 ✨I have less than 1 year experience with React
@@ -20,6 +20,6 @@ React Experience: </br>
 
 Exercise 3: </br>
 The function and logic is in Head.js and Body.js but the component is rendered in App.js. 
-
+#
 Deployed Application: </br>
 [Anne Lewis Coding Challenge](https://cisco-works.vercel.app/)
