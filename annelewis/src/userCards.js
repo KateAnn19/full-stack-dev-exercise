@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import profilepicture from "./undraw_personal_information_962o.png";
 import "./UserCards.css";
-import { TransitionGroup }  from 'react-transition-group'; // ES6
-//var ReactCSSTransitionGroup = require("react-transition-group"); // ES5 with npm
+import { TransitionGroup } from "react-transition-group"; // ES6
 //styles
 
 function UserCards() {
@@ -81,17 +80,16 @@ function UserCards() {
         ))
       ) : (
         <>
-          
-            <div className="loader5"></div>
-            <TransitionGroup
-            transitionName="example"
+          <div className="loader5"></div>
+          <TransitionGroup
+            transitionName="loading"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={300}
           >
             <div>
               <h2>Data Loading...This could take up to 15 seconds...</h2>
-            </div></TransitionGroup>
-          
+            </div>
+          </TransitionGroup>
         </>
       )}
     </div>

@@ -1,14 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./assets/css/style.css";
 
-import UserCards from './userCards.js';
+import UserCards from "./userCards.js";
 
 import Head from "./Head";
 import Body from "./Body";
 
 function App() {
   const [toggle, setToggle] = useState(false);
-  function toggleButton(){
+  function toggleButton() {
     setToggle(!toggle);
   }
   return (
@@ -18,8 +18,10 @@ function App() {
         <Body />
       </table>
       <div>
-        <button onClick={toggleButton} className="user_card_button">Click For User Cards</button>
-        {toggle ? <UserCards/> : null} 
+        <button onClick={toggleButton} className="user_card_button">
+          Click For User Cards
+        </button>
+        {toggle ? <UserCards /> : null}
       </div>
     </div>
   );
